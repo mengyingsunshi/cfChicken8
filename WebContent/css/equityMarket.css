@@ -1,0 +1,718 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font: 12px '微软雅黑',Georgia, serif;
+	color:#000;
+}
+html {
+	/* overflow-y: scroll; */
+	color:#000;
+}
+html, body {
+    background: #f6f6f6;
+}
+a {
+	text-decoration: none;
+}
+a:focus {
+	outline: 0;
+}
+p {
+	font-size: 15px;
+	margin: 0 0 15px 0;
+}
+ul,ol{
+	list-style: none;
+}
+/* Generic Utility */
+.hide {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+.hidden{
+	display: none;
+}
+/* Specific to example one */
+
+#wrap_table {
+	/* background: #eee; */
+	padding: 10px;
+	margin: 0 0 15px 0;
+}
+#wrap_table .nav {
+	width:100%;
+	height: 40px;
+	margin: 0 0 4px 0;
+	font-size:16px;
+     background: transparent;
+}
+#wrap_table .nav li {
+	width: 60px;
+	float: left;
+	margin: 0 10px 0 0;
+}
+#wrap_table .nav li.last {
+	margin-right: 0;
+}
+#wrap_table .nav li a {
+	display: block;
+	padding: 5px;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	border: 0;
+}
+#wrap_table .nav li a:hover {
+	background-color: #111;
+}
+#wrap_table ul {
+	list-style: none;
+}
+#wrap_table ul li a {
+	display: block;
+	color: #000;
+}
+#wrap_table ul li a:hover {
+	background: #fe4902;
+	color: white;
+}
+#wrap_table ul li:last-child a {
+	border: none;
+}
+#wrap_table ul li.nav-one a.current, #wrap_table ul.featured li a:hover {
+	border-bottom:3px solid #ffba00;
+	color: #ffba00;
+}
+#wrap_table ul li.nav-two a.current, #wrap_table ul.core li a:hover {
+	border-bottom:3px solid #ffba00;
+	color: #ffba00;
+}
+#wrap_table ul li.nav-three a.current, #wrap_table ul.jquerytuts li a:hover {
+	border-bottom:3px solid #ffba00;
+	color: #ffba00;
+}
+#wrap_table ul li.nav-four a.current, #wrap_table ul.classics li a:hover {
+	border-bottom:3px solid #ffba00;
+	color: #ffba00;
+}
+/* 表格样式 */
+.ui-paging-container li {
+    color: #000;
+}
+#page-wrap{
+	width: 100%;
+	height:auto;
+	    padding-top: 18px;
+}
+#wrap_table{
+	width:92%;
+	min-width:1050px;
+	height:auto;
+	margin:0 auto;
+}
+#wrap_table .list-wrap{
+	width: 100%;
+	height:auto;
+	margin:0 auto;
+	/* background:#fff; */
+}
+#wrap_table .list-wrap ul{
+	width: 96%;
+	height:auto;
+	position:relative;
+	margin-left:2%;
+}
+#wrap_table .list-wrap ul li:first-child{
+	position:relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	top:0px;
+	left:0px;
+    background: #f2f2f2;
+    box-shadow:0px 0px 0px #ccc,   /*左边阴影*/ 
+    	0px 0px 0px #ccc,  /*上边阴影*/ 
+    	0px 0px 0px #ccc,  /*右边阴影*/ 
+    	0px 3px 5px #ccc; /*下边阴影*/ 
+    font-size: 15px;
+   /*  border-radius: 5px; */
+}
+.Tradeshares_firstTitle:before,.Countshares_firstTitle:before,.Myshares_firstTitle:before,.MonthCount_firstTitle:before{
+	content:"";
+	display:block;
+	float:left;
+	width:20px;
+	height:50px;
+	background: #f2f2f2;
+	border-radius:5px 0 0  5px;
+	margin-left:-20px;
+}
+.Tradeshares_firstTitle:after,.Countshares_firstTitle:after,.Myshares_firstTitle:after,.MonthCount_firstTitle:after{
+	content:"";
+	display:block;
+	float:left;
+	width:20px;
+	height:50px;
+	background: #f2f2f2;
+	border-radius:0 5px 5px 0;
+	position:absolute;
+	right:-20px;
+}
+#Tradeshares .tableCell.operate{
+	width:15%;
+}
+.Myshares_table,.Tradeshares_table,.Countshares_table{
+	width: 100%;
+}
+.Myshares_firstTitle:after{
+	content: " ";
+	clear: both;
+	display: block;
+	/* height: 0px; */
+}
+#wrap_table .list-wrap ul li div{
+	width: 100%;
+	height: 50px;
+}
+#wrap_table .tableCell{
+	float: left;
+	display:block;
+	width:15%;
+	min-width:100px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+}
+ #Tradeshares .tableCell{
+	width:13%;
+}
+ #Tradeshares .tableCell:first-child{
+	
+}
+.Tradeshares_firstTitle .tableCell:first-child{
+	width:15%;
+}
+#wrap_table .tableCell:first-child{
+	width:15%;
+}
+#wrap_table .Myshares_firstTitle a {
+	
+	height:50px;
+	line-height: 50px;
+}
+#wrap_table .tableCell:last-child{
+	width:18%;
+	min-width:160px;
+}
+
+#wrap_table .Myshares_firstTitle .tableCell:first-child{
+	width:15%;
+}
+#wrap_table .nav li a.MonthCount{
+	position:absolute;
+	width:100px;
+	height:40px;
+	top:90px;
+	right:calc(50% - 500px);
+	color:green;
+	background-color:#eae6dd;
+	z-index:2;
+}
+
+
+/* count */
+#wrap_table #Countshares  .tableCell{
+	float: left;
+	display:block;
+	width:20%;
+	min-width:100px;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+}
+/* #wrap_table #Countshares .tableCell:first-child{
+	width:10%;
+	width:100px;
+} */
+#wrap_table  #Countshares .tableCell:last-child{
+	min-width:100px;
+}
+.tablecell_id,.tablecell_department,.Myshares_list .tablecell_change{
+	background-color:#d3e3df;
+	opacity:0.75;
+}
+.Myshares_list:nth-child(even),.Tradeshares_list:nth-child(even),
+.Countshares_list:nth-child(even),.MonthCount_list:nth-child(even){
+	background:#eae6dd;
+}
+.Myshares_list:nth-child(odd),.Tradeshares_list:nth-child(odd),
+.Countshares_list:nth-child(odd),.MonthCount_list:nth-child(odd){
+	background:#f2f2f2;
+}
+#wrap_table ul.nav {
+	line-height: 18px;
+}
+/* 添加按钮 */
+.addInfo,.buy,.sell,.CountMonth{
+	float: right;
+	margin-right: 10px;
+	width:100px;
+	height: 40px;
+	/* background-color:#d3e3df; */
+	color:#fff;
+	text-align: center;
+	line-height: 30px;
+	border-radius:3px;
+	cursor:pointer;
+}
+.addInfo{
+	width:40px;
+}
+.buy,.sell{
+	width:30px;
+	height:35px;
+}
+.buy{
+	margin-right:20px;
+}
+.choose{
+	width: 300px;
+	height: 40px;
+	position: absolute;
+    top: 65px;
+    right: 4%;
+}
+.mask{
+	display: none;
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	z-index:3;
+	background-color:#000;
+	opacity:0.6;
+}
+/* 添加鹅 */
+.addShare_Model,.editShare_Model,.buy_model,.sell_model{
+	display: none;
+	width:560px;
+	height:380px;
+	background-color:#ffba00;
+	color:#333;
+	border-radius:5px;
+	position:absolute;
+	top:100px;
+	left:calc(50% - 280px);
+	z-index:4;
+}
+.addmodel_top,.editmodel_top,.buymodel_top,.sellmodel_top{
+	width: 100%;
+	height: 48px;
+}
+.addmodel_top .addmodel_title,.editmodel_top .editmodel_title,
+.buymodel_top .buymodel_title,.sellmodel_top .sellmodel_title{
+	float: left;
+	margin-left:46px;
+	margin-top: 28px;
+	font-size: 17px;
+	color:#000;
+	font-weight: bold;
+}
+.addmodel_top .addmodel_logo,.editmodel_top .editmodel_logo,
+.buymodel_top .buymodel_logo,.sellmodel_top .sellmodel_logo{
+	float: left;
+	position:absolute;
+	width: 50px;
+	height: 50px;
+	top: -28px;
+    left: calc(50% - 30px);
+}
+.addmodel_top .addmodel_close,.editmodel_top .editmodel_close,
+.buymodel_top .buymodel_close,.sellmodel_top .sellmodel_close{
+	float: right;
+	width: 30px;
+	height: 30px;
+	background:url(../image/close.png)no-repeat center top;
+	background-size:16px 16px;
+	background-position:0px 10px;
+	cursor:pointer;
+}
+.addmodel_content,.editmodel_content,.buymodel_content,.sellmodel_content{
+	margin-top: 30px;
+}
+.add_input input,.add_input select,.edit_input input,
+.edit_input select,.buy_input input,.sell_input input{
+	display: block;
+	width:180px;
+	padding-left: 5px;
+	height:32px;
+	border-radius:3px;
+	border:1px solid #ccc;
+	/* margin:0 auto; */
+	margin-bottom: 20px;
+	background-color:#fff;
+}
+.add_input select,.edit_input select{
+	width: 186px;
+	height: 34px;
+	padding-left: 2px;
+}
+input::-webkit-input-placeholder{
+		color:#222;
+}
+.addmodel_btn,.editmodel_btn,.buymodel_btn,.sellmodel_btn{
+	width: 100%;
+	height:60px;
+}
+.addmodel_btn span,.editmodel_btn span,.buymodel_btn span,.sellmodel_btn span{
+	display: block;
+	float: left;
+	width: 48px;
+	height: 28px;
+	border-radius:15px;
+	background-color:#333;
+	color:#fff;
+	text-align: center;
+	line-height: 28px;
+	font-size: 14px;
+	cursor:pointer;
+}
+.addmodel_btn span.addmodel_submit,.editmodel_btn span.editmodel_submit,
+.buymodel_btn span.buymodel_submit,.sellmodel_btn span.sellmodel_submit{
+	margin-left:200px;
+	margin-right:70px;
+}
+.addmodel_btn span:hover,.editmodel_btn span:hover,
+.buymodel_btn span:hover,.sellmodel_btn span:hover{
+	color:#ffba00;
+}
+
+
+/* 鹅价 */
+.todayPrice{
+	display: none;
+	width:455px;
+	height:72px;
+	background-color:#f3f3f3;
+	border-radius:5px;
+	position: absolute;
+    top: 22px;
+	left:calc(50% - 260px);
+	font-weight: bold;
+    box-shadow:0px 0px 0px #ccc,   /*左边阴影*/ 
+    	0px 0px 0px #ccc,  /*上边阴影*/ 
+    	0px 0px 0px #ccc,  /*右边阴影*/ 
+    	0px 3px 5px #ccc; /*下边阴影*/ 
+}
+.todayPrice p{
+	color:red;
+	display: block;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 0px;
+}
+.todayPrice span.todayPrice_num,.todayPrice span.todayPrice_sure{
+	display: block;
+	float:left;
+	width: calc(100% - 40px);
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+.todayPrice span.todayPrice_sure{
+	width:40px;
+	color:red;
+	cursor:pointer;
+}
+.Countshares_list .tableCell:last-child img{
+	display:block;
+	width:34px;
+	height:35px;
+	margin:0px auto;
+}
+/*日历插件的样式修改  */
+.ui-paging-container li.ui-pager {
+    border-radius: 8px!important;
+    width:36px!important;
+    height:30px!important;
+    background:#fff;
+}
+.ui-paging-container li.ui-pager-disabled, .ui-paging-container li.ui-pager-disabled:hover {
+    background-color: #cccccc6b!important;
+    color:#aaa;
+    cursor: not-allowed;
+}
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus {
+    background-color: #ffba00!important;
+    color: #FFFFFF;
+}
+.breadnav{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	font-size: 15px;
+	margin-left: 4%;
+}
+.nav-container{
+	display:none;
+}
+/* .eou-container {
+	display:none;
+    background: #ffba00!important;
+    border-radius: 0px!important;
+   box-shadow: none!important;
+}
+.eou-container{
+    height: 50px!important;
+    line-height:50px;
+}
+.g-nav-ul li {
+    height: 50px!important;
+    line-height: 50px!important;
+}
+.eou-container-r .m-admin {
+    padding-top: 5px!important;
+}
+.m-li.current {
+    border-bottom: 4px solid #8ebdb1!important;
+}
+
+.eou-container-r .u-admin {
+    top: 50px!important;
+} */
+
+.Tradeshares_list .tableCell.tablecell_State,.Tradeshares_list .tableCell.tablecell_OperatingTime{
+	background-color: #d3e3df;
+	opacity:0.75;
+}
+/* .tableCell.tablecell_change{
+	background-color: transparent;
+} */
+<!-- 分页条 -->
+.js-page-prev{
+	width:40px!important;
+}
+.js-page-next{
+	width:40px;
+}
+.ui-paging-container li.ui-paging-toolbar input {
+    margin: 0 0px 0;
+}
+.js-page-first, .js-page-prev, .js-page-next, .js-page-last {
+    width: 40px!important;
+}
+.ui-paging-container li.ui-paging-toolbar .ui-paging-count{
+    width:40px;
+    border-radius:5px;
+}
+.Gotojump{
+	width:40px!important;
+    border-radius:5px!important;
+    background-color:#ffba00;
+    height:30px!important;
+}
+.Countshares_list .tablecell_BuyToday ,.Countshares_list .tablecell_OperatingTime{
+	background-color: #d3e3df;
+	opacity:0.75;
+}
+.MonthCount_list .tablecell_TodayPrice ,.MonthCount_list .tablecell_SellToday {
+	background-color: #d3e3df;
+	opacity:0.75;
+}
+.orange{
+		color:#ffba00!important;
+		border-bottom:3px solid #ffba00!important;
+}
+.tablecell_change img{
+	display:inline-block;
+	width:30px;
+	height:35px;
+	margin-top:7px;
+}
+.bg_orange{
+	padding:8px;
+	background: #f0ad4e;
+	border-radius:5px;
+	color:#fff;
+}
+.bg_green{
+	padding:8px;
+	background: #99be99;
+	border-radius:5px;
+	color:#fff;
+}
+.operate .bg_Prohibit:hover{
+	color:#000!important;
+}
+.Tradeshares_table .tablecell_change:hover{
+	background:transparent!important;
+	color:#fff!important;
+}
+.tablecell_OperatingRecord:hover{
+	background:transparent!important;
+	color:blue!important;
+	text-decoration:underline!important;
+}
+.add_input span,.edit_input span{
+	float:left;
+	display:block;
+	width:100px;
+	margin-left:140px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+}
+.buy_input span,.sell_input span{
+	float:left;
+	display:block;
+	width:120px;
+	margin-left:130px;
+	height:40px;
+	line-height:40px;
+	font-size:14px;
+}
+
+.TradeRecord_model{
+	display: none;
+    width: 860px;
+    height: 380px;
+    background-color: #ffba00;
+    color: #333;
+    border-radius: 5px;
+    position: absolute;
+    top: 100px;
+    left: calc(50% - 420px);
+    z-index: 4;
+}
+.TradeRecordmodel_top {
+    width: 100%;
+    height: 48px;
+}
+.TradeRecordmodel_top .TradeRecordmodel_title {
+    float: left;
+    margin-left: 46px;
+    margin-top: 28px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+.TradeRecordmodel_top .TradeRecordmodel_logo {
+    float: left;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -28px;
+    left: calc(50% - 30px);
+}
+.TradeRecordmodel_top .TradeRecordmodel_close {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: url(../image/close.png)no-repeat center top;
+    background-size: 16px 16px;
+    background-position: 0px 10px;
+    cursor: pointer;
+}
+.TradeRecordmodel_content{
+	width:96%;
+	height:auto;
+	max-height:290px;
+	background:#fff;
+	margin:0 auto;
+    overflow-y:auto;
+}
+.TradeRecordmodel_content li{
+	width:100%;
+	height:40px;
+}
+.TradeRecordmodel_content li .TradeRecord_list{
+	width:100%;
+	height:40px;
+}
+.TradeRecordmodel_content .TradeRecord_firstTitle{
+	
+}
+.TradeRecordmodel_content li a{
+	float:left;
+	width:100px;
+	height:40px;
+	line-height:40px;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+	text-align:center;
+	color:#000;
+}
+.TradeRecordmodel_content li a.TradeRecord_OperatingTime{
+	width:150px;
+}
+.TradeRecordmodel_content li a.TradeRecord_Remark{
+	width:269px;
+}
+#MonthCount .tableCell {
+	width:13.4%;
+}
+#Myshares .tableCell {
+	width:16%;
+}
+#Myshares .tableCell:last-child{
+	width:21%;
+	min-width:160px;
+}
+#MonthCount .volumeOfTotal{
+	background-color:transparent!important;
+}
+
+#MonthCount .tablecell_OperatingTime{
+	background-color:#d3e3df!important;
+}
+.canSellNum{
+	position:absolute;
+	width:300px!important;
+	top: 155px;
+    left: 120px;
+	color:red;
+    font-size: 14px;
+	float: left;
+    display: block;
+    margin-left: 0px;
+}
+.nav-body{
+	overflow-y:hidden!important;
+}
+.todayPrice p{
+	line-height:24px!important;
+	height:24px;
+	font-size:14px;
+}
+.todayPrice .todayPrice_p2{
+	color:#000;
+	font-weight:normal;
+}
+.todayPrice_p2 span:nth-child(1){
+	text-align:right;
+}
+.todayPrice_p2 span:nth-child(2){
+	padding-left:20px;
+	text-align:left;
+}
+.todayPrice_p3 span:nth-child(1){
+	text-align:right;
+	padding-right:20px;
+}
+.todayPrice_p3 span:nth-child(2){
+	float:left;
+	padding-left: 12px;
+    text-align: left;
+    width: 160px;
+}
+.todayPrice_num{
+	width:190px!important;
+	line-height:24px!important;
+}

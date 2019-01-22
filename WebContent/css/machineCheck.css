@@ -1,0 +1,36 @@
+.nav-container{
+			display:none;
+}
+.breadBox{
+			width:89%;
+			height:48px;
+			line-height:48px;
+			background: #ffffff;
+			margin:25px auto;
+			border: 1px solid #ccc;
+			padding-left:1%;
+			min-width: 900px;
+}
+.machineCheckCon{
+    width: 90%;
+    margin: 0px auto;
+    min-width: 900px;
+    height: 1200px;
+    padding-bottom: 50px;
+    background-color: #fff;
+    font-size: 15px;
+    box-shadow: -3px 3px 10px 2px rgba(195,206,220,.7), 3px 3px 10px 2px rgba(195,206,220,.7);
+}
+.machineCheckCon .con1,.machineCheckCon .con2{
+	width: 100%;
+    height: 550px;
+}
+#machineCheck_Count ,#machineCheck_Rate{
+    width: 90%;
+    height: 500px;
+    margin: 30px auto;
+    float: left;
+}
+.MachineDetails0{
+	border-bottom: 4px solid #00aeef;
+}

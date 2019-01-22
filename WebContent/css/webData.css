@@ -1,0 +1,315 @@
+	
+		html,body{
+			width:100%;
+			height:100%;
+			min-width:1200px;
+		}
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.nav-container{
+			display:none;
+		}
+		.breadBox{
+			width:89%;
+			height:48px;
+			line-height:48px;
+			background: #ffffff;
+			margin:25px auto;
+			border: 1px solid #ccc;
+			padding-left:1%;
+		}
+		.iframeBox{
+			width:90%;
+			height:100%;
+			z-index:3;
+			display:none;
+			position:fixed;
+			top:0px;
+			left:0px;
+		}
+		.mask{
+			position:fixed;
+			width:100%;
+			height:100%;
+			background:#000;
+			opacity:0.7;
+			z-index:0;
+			display:none;
+			top:0px;
+			left:0px;
+		}
+		.bar1{
+			width:90%;
+			height:30px;
+			background:#fff;
+			position:fixed;
+			z-index:4;
+			right:10%;
+			top:52px;
+			display:none;
+			text-align:center;
+			line-height: 30px;
+			font-weight: bold;
+			font-family: '微软雅黑';
+		}
+		.bar2{
+			width:90%;
+			height:15px;
+			background:#fff;
+			position:fixed;
+			z-index:4;
+			right:10%;
+			bottom:0px;
+			display:none;
+		}
+		.topline{
+			width:90%;
+			height:1px;
+			background:#bbb;
+			position:fixed;
+			z-index:4;
+			right:10%;
+			top:95px;
+			display:none;
+		}
+		.closeExcel{
+			width:80px;
+			height:50px;
+			line-height: 50px;
+			background:#1c90ff;
+			border-radius:3px;
+			text-align:center;
+			color:#fff;
+			position:fixed;
+			z-index:4;
+			left:92%;
+			top:100px;
+			cursor: pointer;
+			display:none;
+		}
+		.uploader{
+			 width: 30%;
+			 height: 300px;
+			 max-width:300px;
+			 min-width:200px;
+			 border:1px dashed #000;
+			 position:absolute;
+			 top: 150px;
+			 left: 140px;
+			 border-radius:25px;
+			 text-align:center;
+			 font:16px/300px '微软雅黑';
+			 display:block;
+			 background:url(../image/fileUploader.png)no-repeat center top;
+			 background-size:100px 100px;
+			 background-position:50% 60px;
+			 line-height: 400px;
+			 cursor:pointer;
+		}
+		.flie_button{
+			position:absolute;
+			top: 150px;
+			left: 140px;
+			 width: 30%;
+			 max-width:300px;
+			 min-width:200px;
+			 height: 300px;
+			background: pink;
+			opacity:0;
+			 cursor:pointer;
+		}
+		.uploader i{
+			display:block; 
+		}
+		.uploaderCon{
+			width:90%;
+			margin:30px auto;
+			background:#fff;
+		}
+		@media screen and (max-height: 800px) {
+		    .uploaderCon {
+		        height:400px;
+		    }
+		}
+		@media screen and (max-height: 1000px) {
+		    .uploaderCon {
+		        height:600px;
+		    }
+		}
+		@media screen and (min-height: 1000px) {
+		    .uploaderCon {
+		        height:700px;
+		    }
+		}
+		.p1{
+			position:absolute;
+			top: 500px;
+			left: 160px;
+			width:25%;
+		}
+		.p1 span{
+			display:block;
+			font-size:14px;
+			line-height:22px;
+			color:#666;
+		}
+		
+		#download{
+			display:block;
+			width:20px;
+			height:20px;
+			background:pink;
+		}
+		
+		.QuotationSystem0{
+			border-bottom: 4px solid #00aeef;
+		}
+		.dataBox_bg{
+			display:none;	
+			position:absolute;
+			top:150px;
+			left:470px;
+			width:55%;
+			height:400px;
+			background:url(../image/webdata_bg.png)no-repeat center top;
+		}
+		.dataBox{
+			display:none;	
+			position:absolute;
+			top:150px;
+			left:470px;
+			width:55%;
+			min-width:600px;
+		}
+		.dataBox table{
+			width:100%;
+			min-width:600px;
+		    height: auto;
+		    border-collapse: collapse;
+		    text-align: center;
+		    border: 1px solid #ebebeb;
+		}
+		.dataBox thead tr {
+		    background: #e6e6e6;
+		    height: 40px;
+		}
+		.dataBox thead tr td{
+		    border-right: 1px solid #ebebeb;
+		}
+		.dataBox tbody tr:nth-child(odd) {
+		    background: #f9f9f9;
+		}
+		.dataBox_con tbody tr td {
+		    height: 34px;
+		    border: 1px solid #ebebeb;
+		}
+		.dataBox_con td {
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    height:34px;
+		}
+		.dataBox td{
+			display:block;
+			line-height:40px;
+			font-size:14px;
+			text-align:center;
+			float:left;
+		}
+		.dataBox td:nth-child(1){
+			min-width:50px;
+			width:8%;
+		
+		}
+		.dataBox td:nth-child(2){
+			min-width:80px;
+			width:12%;
+		}
+		.dataBox td:nth-child(3){
+			min-width:140px;
+			width:22%;
+		}
+		.dataBox td:nth-child(4){
+			min-width:115px;
+			width:20%;
+		}
+		.dataBox td:nth-child(5){
+			min-width:100px;
+			width:19%;
+		}
+		.dataBox td:nth-child(6){
+			min-width:100px;
+		}
+		
+		.dataBox_con td:nth-child(3),
+		.dataBox_con td:nth-child(4),
+		.dataBox_con td:nth-child(5),
+		.dataBox_con td:nth-child(6){
+			background:url(../image/preview.png)no-repeat center top;
+			background-position:50% 10px;
+			background-size:19px 19px;
+			cursor:pointer;
+		}
+		.dataBox_con td:nth-child(3):hover,
+		.dataBox_con td:nth-child(4):hover,
+		.dataBox_con td:nth-child(5):hover,
+		.dataBox_con td:nth-child(6):hover{
+			background-image:url(../image/preview_hover.png);
+		}
+/*日历插件的样式修改  */
+.ui-paging-container li.ui-pager {
+    border-radius: 8px!important;
+    width:36px!important;
+    height:30px!important;
+    background:#fff;
+}
+.ui-paging-container li.ui-pager-disabled, .ui-paging-container li.ui-pager-disabled:hover {
+    background-color: #cccccc6b!important;
+    color:#aaa;
+    cursor: not-allowed;
+}
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus {
+    background-color: #4dbcf1!important;
+    color: #FFFFFF;
+}
+.js-page-prev{
+	width:40px!important;
+}
+.js-page-next{
+	width:40px;
+}
+.ui-paging-container li.ui-paging-toolbar input {
+    margin: 0 0px 0;
+}
+.js-page-first, .js-page-prev, .js-page-next, .js-page-last {
+    width: 40px!important;
+}
+.ui-paging-container li.ui-paging-toolbar .ui-paging-count{
+    width:40px;
+    border-radius:5px;
+}
+.Gotojump{
+	width:40px!important;
+    border-radius:5px!important;
+    background-color:#fff;
+    height:30px!important;
+}
+.Gotojump:hover{
+	 background-color:#4dbcf1;
+}
+#pageToolbar1{
+	margin-top:20px;
+}		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

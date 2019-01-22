@@ -1,0 +1,706 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html, body {
+    width: 100%;
+    height: auto;
+    font-family: "microsoft yahei","Arial";
+    background: #f7f8f7;
+    font-size:14px;
+}
+ul,ol{
+	list-style: none;
+}
+a {
+    text-decoration: none;
+}
+input{
+	outline:none;
+}
+.bottomBox{
+	width:100%;
+	text-align:center;
+	display:inline-block;
+	font-size:12px;
+	color:#7c7c7c;
+	position:fixed;
+	bottom:10px;
+}
+.breadNav{
+	margin: 20px auto 0 auto;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    box-sizing: border-box !important;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    font-size: 15px !important;
+	line-height: 50px;
+}
+.breadNav .breadL{
+	float: left;
+	display: block;
+	width:60px;
+	padding-left: 10px;
+
+}
+.addBtn{
+	margin: 15px auto 0 auto;
+    width: 90%;
+    height: 20px;
+}
+.addBtn .add_btn{
+	display: block;
+	width:24px;
+	height:24px;
+	background:pink;
+	border-radius:3px;
+	cursor:pointer;
+	background:url(../image/add_info.png)no-repeat center top;
+	background-size:20px 20px;
+}
+.costTable{
+	margin: 15px auto 0 auto;
+    width: 90%;
+    height: auto;
+    border-collapse:collapse;
+    text-align:center;
+    border:1px solid #ebebeb;
+    margin-bottom:30px;
+}
+.costTable thead tr{
+	background:#e6e6e6;
+	height:40px;
+}
+.costTable tbody tr{
+	height:34px;
+}
+.costTable tbody tr td{
+	height:34px;
+    border:1px solid #ebebeb;
+}
+.costTable tbody tr:nth-child(odd){
+	background:#f9f9f9;
+}
+.costTable tbody tr:nth-child(even){
+	background:#fff;
+}
+.applyBtn span{
+	display:block;
+	width:50px;
+	height:22px;
+	line-height:22px;
+	background:#5bc0de;
+	border:1px solid #5bc0de;
+	border-radius:3px;
+	text-align:center;
+	margin:5px auto;
+	color:#fff;
+}
+.mask{
+	display:none;
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(10%,20%,30%,0.7);
+	z-index:2;
+	top:0;
+	left: 0;
+}
+.copyList{
+	border:1px solid #ccc;
+	min-height: 30px;
+}
+.copyList span{
+	float:left;
+	outline:none;
+	display:inline-block;
+	height:30px;
+	line-height:30px;
+	min-width:80px;
+	max-width: 120px;
+}
+/* 添加框 */
+.addBox,.editBox{
+	display: none; 
+	position:absolute;
+	width:800px;
+	height:auto;
+	top:10px;
+	left:calc(50% - 400px);
+	background:#fff;
+	
+	border-radius: 5px;
+	z-index:3;
+}
+
+.passBox{
+    display: none; 
+	position:absolute;
+	width:550px;
+	height:auto;
+	top:100px;
+	left:calc(50% - 275px);
+	background:#fff;
+	border-radius: 5px;
+	z-index:3;
+	padding-bottom: 25px;
+}
+.sendApplication_Email{
+	display: none; 
+	position:absolute;
+	width:550px;
+	height:auto;
+	top:100px;
+	left:calc(50% - 275px);
+	background:#fff;
+	font-size:14px;
+	border-radius: 5px;
+	z-index:3;
+}
+.addBox .addBox_title,.passBox .passBox_title,.sendBox_title,.editBox_title{
+	width:96%;
+	height: 35px;
+	line-height: 35px;
+	background: #707070;
+	color:#fff;
+	padding-left:2%;
+	padding-right:2%;
+	margin-bottom: 10px;
+	border-radius: 5px 5px 0 0;
+}
+.sendBox_title{
+	margin-bottom: 0px;
+}
+.passBox .passBox_title{
+	margin-bottom: 15px;
+}
+.addBox .add_txt,.passBox .passBox_txt,.edit_txt{
+	float:left;
+}
+.addBox .add_close,.passBox_close,.sendBox_close ,.edit_close{
+	float:right;
+	display: block;
+	width:20px;
+	height:28px;
+	cursor: pointer;
+	margin-top:7px;
+	background:url(../image/close_model.png)no-repeat center top;
+}
+.addBox_content,.passBox_content,.editBox_content{
+	overflow: hidden;
+	margin-bottom: 0px;
+	padding-top: 15px;
+}
+.passBox_content p{
+	padding-left: 40px;
+}
+.addBox_content li,.editBox_content li{
+	float:left;
+	width:37%;
+	padding-left:5%;
+	padding-right: 8%;
+	margin-bottom: 18px;
+}
+.addBox_content li span,.editBox_content li span{
+	float:left;
+	display: block;
+	width:95px;
+}
+.addBox_content input,.editBox_content input{
+	width: 174px;
+    height: 14px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+
+}
+
+.addBox_content select,.editBox_content select{
+	width:200px;
+	height:28px;
+	font-size: 14px;
+    line-height: 28px;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.addBox .addBtns,.editBox .editBtns{
+	clear:both;
+	width:100%;
+	height: 30px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.addBox .addBtns span,.editBox .editBtns span{
+	float: left;
+	display: block;
+	width:70px;
+	height:30px;
+	line-height: 30px;
+	border-radius:3px;
+	cursor: pointer;
+}
+.addBox .addBtns span.add_cancle,.editBox .editBtns span.edit_cancle{
+	margin-left: 280px;
+	margin-right: 100px;
+	background: #eff5f8;
+	border:1px solid #eff5f8;
+}
+.addBox .addBtns span.add_ok,.editBox .editBtns span.edit_ok{
+	background: #ffb445;
+	border:1px solid #ffb445;
+	color: #fff;
+}
+.addBox .addBtns span.add_ok:hover,.editBox .editBtns span.edit_ok:hover{
+	background: #fff;
+	border:1px solid #ffb445;
+	color:#ffb445;
+}
+.pass_btns{
+	width:100%;
+	margin-top: 40px;
+	overflow: hidden;
+}
+.pass_btns span{
+	display: block;
+    float: left;
+    width: 55px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    background: #fccf2c;
+    border: 1px solid #fccf2c;
+    cursor: pointer;
+}
+.pass_btns span.passNo{
+	margin-right: 135px;
+    margin-left: 140px;
+    color: #fccf2c;
+    background: #fff;
+}
+.passNoBox{
+	display: none;
+}
+.passNo_reason{
+	padding-left: 90px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.passNo_reason span{
+	float: left;
+}
+.passNo_reason input{
+	float: left;
+	display: block;
+    width: 215px;
+    height: 26px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding-left: 5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.nopass_btn {
+    clear: both;
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 15px;
+}
+.nopass_btn .Nopass_cancel {
+    margin-right: 140px;
+    margin-left: 140px;
+}
+.nopass_btn span {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 26px;
+    line-height: 27px;
+    background: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 15px;
+    color: #fff;
+}
+.sendApplication_Email li,.sendApplication_Email1 li,.sendApplication_Email2 li{
+	width:100%;
+	height: 28px;
+	margin-top:24px
+}
+
+.sendApplication_Email1 li.Copyto{
+	height: auto;
+}
+.Subject{
+	clear:both;
+}
+.sendApplication_Email li span{
+	float: left;
+	width:50px;
+	text-align: left;
+	margin-left: 25px;
+	margin-right: 30px;
+}
+.sendApplication_Email1 li span,.sendApplication_Email2 li span{
+	float: left;
+	width:63px;
+	text-align: left;
+	margin-left: 40px;
+	margin-right: 30px;
+}
+.sendApplication_Email li input{
+	min-height: 26px;
+	height:auto;
+}
+.sendApplication_Email li input,.sendApplication_Email1 li input,.sendApplication_Email2 li input{
+	float: left;
+	display: block;
+	width:410px;
+	
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+.sendApplication_Email1 li input,.sendApplication_Email2 li input{
+		width:575px;
+		height: 14px;
+    padding: 6px 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.sendApplication_Email li.Password .password{
+	    width: 410px;
+    min-height: 26px;
+    height: auto;
+    padding:0px;
+}
+.sendApplication_Email li .password,.sendApplication_Email1 li .password,.sendApplication_Email2 li .password{
+	float: left;
+	display: block;
+	width:575px;
+		height: 14px;
+    padding: 6px 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	margin-left:0px;
+	border:1px solid #ccc;
+	border-radius:3px;
+	text-align:left;
+}
+.sendApplication_Email li  div#Tolist{
+		min-height:26px;
+	line-height:26px;
+}
+.sendApplication_Email li  div#Tolist,.sendApplication_Email1 li  div#Tolist,.sendApplication_Email2 li  div#Tolist2{
+	float: left;
+	display: block;
+	width:410px;
+	height: auto;
+	border:1px solid #ccc;
+	border-radius:3px;
+	margin-bottom:24px;
+}
+.sendApplication_Email1 li  div#Tolist,.sendApplication_Email2 li  div#Tolist2{
+	width:575px;
+	height: 14px;
+    padding: 6px 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.sendApplication_Email li  div#Copylist,.sendApplication_Email1 li  div#Copylist,.sendApplication_Email2 li  div#Copylist2{
+	float: left;
+	display: block;
+	width:410px;
+	min-height:52px;
+	line-height:26px;
+	height: auto;
+	border:1px solid #ccc;
+	border-radius:3px;
+	margin-bottom:24px;
+}
+.sendApplication_Email1 li  div#Copylist,.sendApplication_Email2 li  div#Copylist2{
+	width:575px;
+	height: auto;
+    padding: 6px 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.Subject input{
+	margin-bottom:24px;
+	
+}
+.sendApplication_Email .sendBox_btn{
+	clear:both;
+	width:100%;
+	height: 30px;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.sendApplication_Email .sendBox_btn span{
+	float: left;
+	display: block;
+	width:70px;
+	height:30px;
+	line-height: 30px;
+	border-radius:3px;
+	cursor: pointer;
+}
+.sendApplication_Email .sendBox_btn span.send_cancle{
+	margin-left: 150px;
+	margin-right: 100px;
+	background: #eff5f8;
+	border:1px solid #eff5f8;
+}
+.sendApplication_Email .sendBox_btn span.send_ok{
+	background: #ffb445;
+	border:1px solid #ffb445;
+	color: #fff;
+}
+
+.sendApplication_Email .sendBox_btn span.add_ok:hover,.sendBox_btn span.send_ok:hover{
+	background: #fff;
+	border:1px solid #ffb445;
+	color:#ffb445;
+}
+.email_con{
+    height: 100px!important;
+
+}
+.email_con div,.email_con1 div,.email_con2 div{
+	float: left;
+    display: block;
+    width: 410px;
+    min-height: 100px;
+    height:auto;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+.email_con1 div,.email_con2 div{
+	width:575px;
+    padding: 6px 12px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	
+}
+/*日历插件的样式修改  */
+.ui-paging-container li.ui-pager {
+    border-radius: 8px!important;
+    width:36px!important;
+    height:30px!important;
+    background:#fff;
+}
+.ui-paging-container li.ui-pager-disabled, .ui-paging-container li.ui-pager-disabled:hover {
+    background-color: #cccccc6b!important;
+    color:#aaa;
+    cursor: not-allowed;
+}
+.ui-paging-container li.ui-pager:hover, .ui-paging-container li.focus {
+    background-color: #4dbcf1!important;
+    color: #FFFFFF;
+}
+.breadnav{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	font-size: 15px;
+	margin-left: 4%;
+}
+.nav-container{
+	display:none;
+}
+<!-- 分页条 -->
+.js-page-prev{
+	width:40px!important;
+}
+.js-page-next{
+	width:40px;
+}
+.ui-paging-container li.ui-paging-toolbar input {
+    margin: 0 0px 0;
+}
+.js-page-first, .js-page-prev, .js-page-next, .js-page-last {
+    width: 40px!important;
+}
+.ui-paging-container li.ui-paging-toolbar .ui-paging-count{
+    width:40px;
+    border-radius:5px;
+}
+.Gotojump{
+	width:40px!important;
+    border-radius:5px!important;
+    background-color:#fff;
+    height:30px!important;
+}
+.Gotojump:hover{
+	 background-color:#4dbcf1;
+}
+.applyBtn span{
+	cursor:pointer;
+}
+.email_con{
+	font-size:14px;
+}
+.sendApplication_Email .eye{
+	position:relative;
+	display:block;
+	top:5px;
+	left:520px;
+	width:20px;
+	height:20px;
+	background:url(../image/passeye_psd.png)no-repeat center top;
+	background-size:20px 20px;
+}
+.sendApplication_Email1 .eye,.sendApplication_Email2 .eye{
+	position:relative;
+	display:block;
+	top:5px;
+	left:738px;
+	width:20px;
+	height:20px;
+	background:url(../image/passeye_psd.png)no-repeat center top;
+	background-size:20px 20px;
+}
+.sendApplication_Email1 #To_div ,.sendApplication_Email2 #To_div2{
+    display: none;
+    width: 408px;
+    border: 2px #74c0f9 solid;
+    background: #FFF;
+    position: absolute;
+    top: 202px;
+    left: 133px;
+    color: #323232;
+    cursor: pointer;
+}
+
+.sendApplication_Email1 #CC_div ,.sendApplication_Email2 #CC_div2{
+    display: none;
+    width: 408px;
+    border: 2px #74c0f9 solid;
+    background: #FFF;
+    position: absolute;
+    top: 244px;
+    left: 133px;
+    color: #323232;
+    cursor: pointer;
+}
+.newDiv:hover{
+	background:#c1e2fb;
+}
+.green{
+	display:block;
+	width:50px;
+	height:24px;
+	background:#65be1b;
+	border-radius:3px;
+	text-align:center;
+	margin: 0 auto;
+	font-size:14px;
+	line-height:24px;
+	color:#fff;
+}
+.noPass{
+	display:block;
+	width:50px;
+	height:24px;
+	background:#ef626ec2;
+	border-radius:3px;
+	text-align:center;
+	margin: 0 auto;
+	font-size:14px;
+	line-height:24px;
+	color:#fff;
+	cursor:pointer;
+}
+.noDeal{
+	cursor:pointer;
+}
+.noDeal:hover{
+	text-decoration:underline;
+}
+.add_engineer,.edit_engineer{
+	width:200px!important;
+	height:28px!important;
+}
+.add_engineer_list,.edit_engineer_list{
+	 display:none; 
+	position:absolute;
+	left:135px;
+	width:195px;
+	min-height:30px;
+	max-height:200px;
+	overflow-y:auto;
+	border:1px solid #ccc;
+}
+.add_engineer_list li,.edit_engineer_list li{
+	display:block;
+	width:190px;
+    padding-left: 5px;
+    padding-right: 0;
+	height:30px;
+	line-height:30px;
+	margin-bottom: 0px;
+	background:#fff;
+	cursor:pointer;
+}
+.add_engineer_list li:hover,.edit_engineer_list li:hover{
+	background:#c1e2fb;
+}
+.editBtn{
+	cursor:pointer;
+}
+/* 表格宽度 */
+.editBtn{
+	min-width:50px;
+}
+.customer{
+	min-width:100px;
+	max-width:200px;
+}
+.service{
+	min-width:100px;
+	max-width:200px;
+}
+.visitDate{
+	min-width:80px;
+}
+.saleMan{
+	min-width:70px;
+}
+.engineer{
+	min-width:70px;
+}
+.applyBtn{
+	min-width:70px;
+}
+.passBtn{
+	min-width:90px;
+}
+.cost{
+	min-width:80px;
+}
+.tbody_tr td {
+    padding: 0 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.addCon_title,.addCon_title2,.editCon_title,.editCon_title2{
+	color:#4dbcf1;
+	margin-left:17px;
+	font-size:16px;
+}
